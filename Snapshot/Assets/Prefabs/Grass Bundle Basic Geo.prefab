@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6335535554220160543
+--- !u!1 &7050242837253095598
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7041098587168605196}
-  - component: {fileID: 2084048849390779962}
-  - component: {fileID: 5751252890483442371}
+  - component: {fileID: 7050242837252742286}
+  - component: {fileID: 7050242837249875118}
+  - component: {fileID: 7050242837250842222}
   m_Layer: 0
   m_Name: Grass Bundle Basic Geo
   m_TagString: Untagged
@@ -18,35 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7041098587168605196
+--- !u!4 &7050242837252742286
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6335535554220160543}
-  m_LocalRotation: {x: -0, y: -0.77545226, z: -0, w: 0.63140625}
-  m_LocalPosition: {x: -7.647, y: 0.385, z: -1.586}
-  m_LocalScale: {x: 50.82293, y: 14.71462, z: 39.955956}
+  m_GameObject: {fileID: 7050242837253095598}
+  m_LocalRotation: {x: 0, y: -0.6950316, z: -0, w: 0.7189792}
+  m_LocalPosition: {x: -11.52, y: 3.75, z: 2.11}
+  m_LocalScale: {x: 156.13916, y: 32.647556, z: 122.753456}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -101.692, z: 0}
---- !u!33 &2084048849390779962
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7050242837249875118
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6335535554220160543}
-  m_Mesh: {fileID: 4068373912626513877, guid: e72682969a1be2241ab758139a0252ef, type: 3}
---- !u!23 &5751252890483442371
+  m_GameObject: {fileID: 7050242837253095598}
+  m_Mesh: {fileID: 4300000, guid: e72682969a1be2241ab758139a0252ef, type: 3}
+--- !u!23 &7050242837250842222
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6335535554220160543}
+  m_GameObject: {fileID: 7050242837253095598}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -68,7 +68,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

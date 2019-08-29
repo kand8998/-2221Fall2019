@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: 75b8ee3ed9e41144190af1accf665890
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: extrudedSurface2
+    100004: extrudedSurface8
+    100006: FG_Ground_Geo
+    100008: FG_Ground_Geo 1
+    100010: group1
+    100012: Left_Rock_Wall
+    100014: Level_Rock_Geo_on_Left_Back
+    100016: pCube10
+    100018: pCube12
+    100020: pCube20
+    100022: pCube21
+    100024: pCube22
+    100026: pCube3
+    100028: pCube5
+    100030: pCube8
+    100032: pCylinder1
+    100034: pCylinder10
+    100036: pCylinder13
+    100038: pCylinder15
+    100040: pCylinder2
+    100042: pCylinder5
+    100044: pCylinder8
+    100046: pCylinder9
+    100048: pSphere1
+    100050: pTorus1
+    100052: Ratchet_Place_Holder
+    100054: Right_Wall_Geo
+    100056: Wire_Bundle_Split_Left_Geo
+    400000: //RootNode
+    400002: extrudedSurface2
+    400004: extrudedSurface8
+    400006: FG_Ground_Geo
+    400008: FG_Ground_Geo 1
+    400010: group1
+    400012: Left_Rock_Wall
+    400014: Level_Rock_Geo_on_Left_Back
+    400016: pCube10
+    400018: pCube12
+    400020: pCube20
+    400022: pCube21
+    400024: pCube22
+    400026: pCube3
+    400028: pCube5
+    400030: pCube8
+    400032: pCylinder1
+    400034: pCylinder10
+    400036: pCylinder13
+    400038: pCylinder15
+    400040: pCylinder2
+    400042: pCylinder5
+    400044: pCylinder8
+    400046: pCylinder9
+    400048: pSphere1
+    400050: pTorus1
+    400052: Ratchet_Place_Holder
+    400054: Right_Wall_Geo
+    400056: Wire_Bundle_Split_Left_Geo
+    2100000: lambert1
+    2300000: extrudedSurface2
+    2300002: extrudedSurface8
+    2300004: FG_Ground_Geo 1
+    2300006: Left_Rock_Wall
+    2300008: Level_Rock_Geo_on_Left_Back
+    2300010: pCube10
+    2300012: pCube12
+    2300014: pCube20
+    2300016: pCube21
+    2300018: pCube22
+    2300020: pCube3
+    2300022: pCube5
+    2300024: pCube8
+    2300026: pCylinder1
+    2300028: pCylinder10
+    2300030: pCylinder13
+    2300032: pCylinder15
+    2300034: pCylinder2
+    2300036: pCylinder5
+    2300038: pCylinder8
+    2300040: pCylinder9
+    2300042: pSphere1
+    2300044: pTorus1
+    2300046: Ratchet_Place_Holder
+    2300048: Right_Wall_Geo
+    2300050: Wire_Bundle_Split_Left_Geo
+    3300000: extrudedSurface2
+    3300002: extrudedSurface8
+    3300004: FG_Ground_Geo 1
+    3300006: Left_Rock_Wall
+    3300008: Level_Rock_Geo_on_Left_Back
+    3300010: pCube10
+    3300012: pCube12
+    3300014: pCube20
+    3300016: pCube21
+    3300018: pCube22
+    3300020: pCube3
+    3300022: pCube5
+    3300024: pCube8
+    3300026: pCylinder1
+    3300028: pCylinder10
+    3300030: pCylinder13
+    3300032: pCylinder15
+    3300034: pCylinder2
+    3300036: pCylinder5
+    3300038: pCylinder8
+    3300040: pCylinder9
+    3300042: pSphere1
+    3300044: pTorus1
+    3300046: Ratchet_Place_Holder
+    3300048: Right_Wall_Geo
+    3300050: Wire_Bundle_Split_Left_Geo
+    4300000: FG_Ground_Geo
+    4300002: Right_Wall_Geo
+    4300004: Ratchet_Place_Holder
+    4300006: Left_Rock_Wall
+    4300008: Wire_Bundle_Split_Left_Geo
+    4300010: Level_Rock_Geo_on_Left_Back
+    4300012: pCylinder1
+    4300014: extrudedSurface2
+    4300016: pCylinder2
+    4300018: pTorus1
+    4300020: pCylinder5
+    4300022: pCube3
+    4300024: pCube5
+    4300026: pCylinder8
+    4300028: pCylinder9
+    4300030: pCube8
+    4300032: pCube10
+    4300034: pCylinder10
+    4300036: pCube12
+    4300038: pSphere1
+    4300040: extrudedSurface8
+    4300042: pCylinder13
+    4300044: pCube20
+    4300046: pCube21
+    4300048: pCube22
+    4300050: pCylinder15
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
