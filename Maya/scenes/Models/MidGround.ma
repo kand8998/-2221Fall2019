@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: MidGround.ma
-//Last modified: Fri, Oct 04, 2019 04:58:03 PM
+//Last modified: Fri, Oct 04, 2019 04:59:24 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -14,8 +14,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "835BC3EB-4CFE-CC37-EDCE-CDA461F2291D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 16.85224147822602 -21.284341243456023 97.017048269567681 ;
-	setAttr ".r" -type "double3" 719.66164711969611 -3240.5999999992796 1.16481777936652e-18 ;
+	setAttr ".t" -type "double3" 47.677805443421327 64.246632101604646 36.882767858796683 ;
+	setAttr ".r" -type "double3" 659.66164711969293 -3202.5999999992728 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F42D2509-4C44-6C86-198B-7191740B4827";
 	setAttr -k off ".v" no;
@@ -18927,6 +18927,12 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 32 ".uvst[0].uvsp[0:31]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.087866001 0.625 0.087866001 0.625 0.66213405
+		 0.875 0.087865993 0.125 0.087865993 0.375 0.66213405 0.125 0.13471347 0.375 0.61528659
+		 0.625 0.61528659 0.875 0.13471347 0.625 0.13471349 0.375 0.13471349 0.375 0.031747658
+		 0.625 0.031747658 0.625 0.71825236 0.875 0.031747654 0.125 0.031747654 0.375 0.71825236;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -18936,6 +18942,58 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".pt[1]" -type "float3" -0.13492928 0.030209448 -0.13492928 ;
 	setAttr ".pt[6]" -type "float3" 0.13492928 0.030209448 0.13492928 ;
 	setAttr ".pt[7]" -type "float3" -0.13492928 0.030209448 0.13492928 ;
+	setAttr -s 20 ".vt[0:19]"  -0.86027467 -0.5 0.86027467 0.86027467 -0.5 0.86027467
+		 -0.61417884 0.55265313 0.61417884 0.61417884 0.55265313 0.61417884 -0.61417884 0.55265313 -0.61417884
+		 0.61417884 0.55265313 -0.61417884 -0.86027467 -0.5 -0.86027467 0.86027467 -0.5 -0.86027467
+		 -0.83656138 -0.20716424 0.83656138 0.83656138 -0.20716424 0.83656138 0.83656144 -0.20716429 -0.83656144
+		 -0.83656144 -0.20716429 -0.83656144 -0.81825727 -0.013799209 -0.81825727 0.81825727 -0.013799209 -0.81825727
+		 0.81825727 -0.013799176 0.81825727 -0.81825727 -0.013799176 0.81825727 -0.85170662 -0.39419287 0.85170662
+		 0.85170662 -0.39419287 0.85170662 0.85170662 -0.39419287 -0.85170662 -0.85170662 -0.39419287 -0.85170662;
+	setAttr -s 36 ".ed[0:35]"  0 1 0 2 3 0 4 5 0 6 7 0 0 16 0 1 17 0 2 4 0
+		 3 5 0 4 12 0 5 13 0 6 0 0 7 1 0 8 15 0 9 14 0 10 18 0 11 19 0 8 9 1 9 10 1 10 11 1
+		 11 8 1 12 11 0 13 10 0 14 3 0 15 2 0 12 13 1 13 14 1 14 15 1 15 12 1 16 8 0 17 9 0
+		 18 7 0 19 6 0 16 17 1 17 18 1 18 19 1 19 16 1;
+	setAttr -s 18 -ch 72 ".fc[0:17]" -type "polyFaces" 
+		f 4 16 13 26 -13
+		mu 0 4 14 15 24 25
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 24 21 18 -21
+		mu 0 4 21 22 16 19
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 17 -22 25 -14
+		mu 0 4 15 17 23 24
+		f 4 19 12 27 20
+		mu 0 4 18 14 25 20
+		f 4 32 29 -17 -29
+		mu 0 4 26 27 15 14
+		f 4 33 -15 -18 -30
+		mu 0 4 27 29 17 15
+		f 4 -19 14 34 -16
+		mu 0 4 19 16 28 31
+		f 4 35 28 -20 15
+		mu 0 4 30 26 14 18
+		f 4 2 9 -25 -9
+		mu 0 4 4 5 22 21
+		f 4 -26 -10 -8 -23
+		mu 0 4 24 23 11 3
+		f 4 -27 22 -2 -24
+		mu 0 4 25 24 3 2
+		f 4 -28 23 6 8
+		mu 0 4 20 25 2 13
+		f 4 0 5 -33 -5
+		mu 0 4 0 1 27 26
+		f 4 -12 -31 -34 -6
+		mu 0 4 1 10 29 27
+		f 4 -35 30 -4 -32
+		mu 0 4 31 28 7 6
+		f 4 10 4 -36 31
+		mu 0 4 12 0 26 30;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "BC61245D-4B9F-3E8C-B244-8E9ED7C7D5B9";
@@ -19399,53 +19457,6 @@ createNode polySoftEdge -n "polySoftEdge6";
 	setAttr ".ics" -type "componentList" 11 "e[210]" "e[301]" "e[329]" "e[346:348]" "e[613]" "e[618]" "e[623:624]" "e[627]" "e[630:631]" "e[635]" "e[641]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".a" 180;
-createNode polyCube -n "polyCube1";
-	rename -uid "B9F364D5-4BAF-A5AA-6BC1-0C8678DBD7C0";
-	setAttr ".cuv" 4;
-createNode polyTweak -n "polyTweak6";
-	rename -uid "2668D58B-4AFF-B8AA-E5D2-26A2F608BAE4";
-	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk";
-	setAttr ".tk[0]" -type "float3" -0.36027464 0 0.36027464 ;
-	setAttr ".tk[1]" -type "float3" 0.36027464 0 0.36027464 ;
-	setAttr ".tk[6]" -type "float3" -0.36027464 0 -0.36027464 ;
-	setAttr ".tk[7]" -type "float3" 0.36027464 0 -0.36027464 ;
-createNode polySplit -n "polySplit11";
-	rename -uid "9D6AE460-42DA-94A3-104C-3EADF97BCDC1";
-	setAttr -s 5 ".e[0:4]"  0.351464 0.351464 0.64853603 0.64853603 0.351464;
-	setAttr -s 5 ".d[0:4]"  -2147483644 -2147483643 -2147483639 -2147483640 -2147483644;
-	setAttr ".sma" 180;
-	setAttr ".m2015" yes;
-createNode polySplit -n "polySplit12";
-	rename -uid "964A9EFF-44AD-D0C8-C88A-4081FB752004";
-	setAttr -s 5 ".e[0:4]"  0.71105701 0.71105701 0.28894299 0.28894299
-		 0.71105701;
-	setAttr -s 5 ".d[0:4]"  -2147483640 -2147483639 -2147483635 -2147483636 -2147483640;
-	setAttr ".sma" 180;
-	setAttr ".m2015" yes;
-createNode polyTweak -n "polyTweak7";
-	rename -uid "83AEB40E-4B95-4ACD-F151-009765572AA9";
-	setAttr ".uopa" yes;
-	setAttr -s 12 ".tk";
-	setAttr ".tk[2]" -type "float3" -0.11417884 0.052653126 0.11417884 ;
-	setAttr ".tk[3]" -type "float3" 0.11417884 0.052653126 0.11417884 ;
-	setAttr ".tk[4]" -type "float3" -0.11417884 0.052653126 -0.11417884 ;
-	setAttr ".tk[5]" -type "float3" 0.11417884 0.052653126 -0.11417884 ;
-	setAttr ".tk[8]" -type "float3" -0.1029103 -0.058628261 0.1029103 ;
-	setAttr ".tk[9]" -type "float3" 0.1029103 -0.058628261 0.1029103 ;
-	setAttr ".tk[10]" -type "float3" 0.10291031 -0.058628265 -0.10291031 ;
-	setAttr ".tk[11]" -type "float3" -0.10291031 -0.058628265 -0.10291031 ;
-	setAttr ".tk[12]" -type "float3" -0.15211801 -0.052653123 -0.15211801 ;
-	setAttr ".tk[13]" -type "float3" 0.15211801 -0.052653123 -0.15211801 ;
-	setAttr ".tk[14]" -type "float3" 0.15211801 -0.052653119 0.15211801 ;
-	setAttr ".tk[15]" -type "float3" -0.15211801 -0.052653119 0.15211801 ;
-createNode polySplit -n "polySplit13";
-	rename -uid "D28F483E-4BF4-3448-AEE2-D18106630A7F";
-	setAttr -s 5 ".e[0:4]"  0.36131901 0.36131901 0.63868099 0.63868099
-		 0.36131901;
-	setAttr -s 5 ".d[0:4]"  -2147483644 -2147483643 -2147483634 -2147483633 -2147483644;
-	setAttr ".sma" 180;
-	setAttr ".m2015" yes;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -19483,7 +19494,6 @@ connectAttr ":frontShape.msg" "imagePlaneShape2.ltc";
 connectAttr "polySoftEdge1.out" "Background_PlaneShape.i";
 connectAttr "polySoftEdge6.out" "Rock_BaseShape.i";
 connectAttr "polyDelEdge2.out" "MG_Rock_Base_R_WallShape.i";
-connectAttr "polySplit13.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
@@ -19700,11 +19710,6 @@ connectAttr "polySoftEdge4.out" "polySoftEdge5.ip";
 connectAttr "Rock_BaseShape.wm" "polySoftEdge5.mp";
 connectAttr "polySoftEdge5.out" "polySoftEdge6.ip";
 connectAttr "Rock_BaseShape.wm" "polySoftEdge6.mp";
-connectAttr "polyCube1.out" "polyTweak6.ip";
-connectAttr "polyTweak6.out" "polySplit11.ip";
-connectAttr "polySplit11.out" "polySplit12.ip";
-connectAttr "polySplit12.out" "polyTweak7.ip";
-connectAttr "polyTweak7.out" "polySplit13.ip";
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
