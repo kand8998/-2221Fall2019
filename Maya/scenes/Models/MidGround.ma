@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: MidGround.ma
-//Last modified: Tue, Oct 08, 2019 03:52:26 PM
+//Last modified: Tue, Oct 08, 2019 03:53:12 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -14,14 +14,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "835BC3EB-4CFE-CC37-EDCE-CDA461F2291D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 607.78373244481611 840.88928130926195 1313.4897010998225 ;
-	setAttr ".r" -type "double3" 1049.6616470594615 -2490.59999999825 0 ;
+	setAttr ".t" -type "double3" -47.40894115004555 121.31764778696538 734.04158302732674 ;
+	setAttr ".r" -type "double3" 1069.4616470594503 -2524.1999999982322 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F42D2509-4C44-6C86-198B-7191740B4827";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1594.8233753676175;
+	setAttr ".coi" 642.83274648956285;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
