@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5344758837801803481, guid: 317f61a81f39f9a499beb6a6957b0d02,
         type: 3}
       propertyPath: m_Name
-      value: LeafBundle
+      value: LeafBundle Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4729205886294846443, guid: 317f61a81f39f9a499beb6a6957b0d02,
         type: 3}
@@ -142,5 +142,9 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7388631
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: fcb6e2dcf189ade4aa43954a4a43cbfc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c1fbdeb41507644cad649a7bcfeb0d8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcb6e2dcf189ade4aa43954a4a43cbfc, type: 3}
