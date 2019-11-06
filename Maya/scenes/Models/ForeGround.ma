@@ -1,7 +1,9 @@
 //Maya ASCII 2018 scene
 //Name: ForeGround.ma
-//Last modified: Wed, Nov 06, 2019 10:42:02 AM
+//Last modified: Wed, Nov 06, 2019 03:32:02 PM
 //Codeset: 1252
+file -rdi 1 -ns "MidGround" -rfn "MidGroundRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10847775/Documents/Game Essentials/2221Fall2019/Maya//scenes/Models/MidGround.ma";
+file -r -ns "MidGround" -dr 1 -rfn "MidGroundRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10847775/Documents/Game Essentials/2221Fall2019/Maya//scenes/Models/MidGround.ma";
 requires maya "2018";
 requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
@@ -15,13 +17,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "1243E703-495F-D636-8716-A5BFC346021E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -51.199937625554867 135.80055889215916 1457.0859687458681 ;
-	setAttr ".r" -type "double3" -722.73835306451997 5765.7999999985159 9.9903770284662484e-17 ;
+	setAttr ".t" -type "double3" -311.58038486080238 1245.1745018692934 916.78509700527388 ;
+	setAttr ".r" -type "double3" -766.53835306546227 5749.3999999996086 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "73FD4AA4-4945-D67E-DB80-43A372F43184";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1105.7795589519758;
+	setAttr ".coi" 1670.8113345306961;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -59984,19 +59986,19 @@ createNode mesh -n "ChunkyFlower_highShape" -p "ChunkyFlower_high";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9B84481D-4FA3-B3CC-F6B8-9C8F92B9E0FA";
-	setAttr -s 42 ".lnk";
-	setAttr -s 42 ".slnk";
+	rename -uid "C1435D4B-4D7F-ADF8-CB45-769785A1F004";
+	setAttr -s 62 ".lnk";
+	setAttr -s 62 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3F943D5A-427D-138E-4129-12AFCA6E4F12";
+	rename -uid "C8EF8200-4EF3-5CAC-221D-8196A2EE17C8";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "9FB2175A-4814-08C1-8323-EA937BF873F4";
+	rename -uid "63FD4FEC-421D-1669-B6B6-36AA62BF7B47";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3CE9F9E6-4851-EAEA-2D8C-B68199D558FB";
+	rename -uid "724097C9-4CA2-0889-8A7B-29A64C0C69BD";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "052BA599-4000-49E1-C25C-528E309A5C96";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E32CA7C8-45C9-BC93-E391-83BF2C042302";
+	rename -uid "9E12D8C3-42C9-C3D4-852C-CA981E8FA079";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "1B49CEA8-49F4-5EAB-1C8C-1DA6BD698AE3";
 	setAttr ".g" yes;
@@ -60090,7 +60092,7 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
 		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
 		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
-		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1119\n            -height 714\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 667\n            -height 814\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
@@ -60124,10 +60126,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n"
 		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n"
 		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n"
-		+ "                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
+		+ "                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 667\\n    -height 814\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 667\\n    -height 814\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -61145,6 +61147,515 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[37].x" 7170;
 	setAttr ".tgi[0].ni[37].y" -21625.71484375;
 	setAttr ".tgi[0].ni[37].nvs" 1923;
+createNode reference -n "MidGroundRN";
+	rename -uid "D67511EC-4165-AAD0-98FC-A5B90F0384E5";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"MidGroundRN"
+		"MidGroundRN" 0
+		"MidGroundRN" 218
+		2 "|MidGround:Track" "translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:Track" "rotatePivot" " -type \"double3\" -91.88869250419568857 -78.56542823483589189 136.07421364139628395"
+		
+		2 "|MidGround:Track" "scalePivot" " -type \"double3\" -91.88869250419568857 -78.56542823483589189 136.07421364139628395"
+		
+		2 "|MidGround:Track|MidGround:RailPlatform" "rotatePivot" " -type \"double3\" -173.22750983564560556 -101.97552113952977493 237.85015293047365503"
+		
+		2 "|MidGround:Track|MidGround:RailPlatform" "scalePivot" " -type \"double3\" -173.22750983564560556 -101.97552113952977493 237.85015293047365503"
+		
+		2 "|MidGround:Track|MidGround:UpperRail_01" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:Track|MidGround:UpperRail_01" "rotatePivot" " -type \"double3\" -88.17024262389581679 -71.70019436596278695 145.05685712578352309"
+		
+		2 "|MidGround:Track|MidGround:UpperRail_01" "scalePivot" " -type \"double3\" -88.17024262389581679 -71.70019436596278695 145.05685712578352309"
+		
+		2 "|MidGround:Track|MidGround:UpperRail_02" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:Track|MidGround:UpperRail_02" "rotatePivot" " -type \"double3\" -114.06626598518967342 -71.70019436596278695 123.5221762283032092"
+		
+		2 "|MidGround:Track|MidGround:UpperRail_02" "scalePivot" " -type \"double3\" -114.06626598518967342 -71.70019436596278695 123.5221762283032092"
+		
+		2 "|MidGround:Track|MidGround:LowerRail_01" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:Track|MidGround:LowerRail_01" "rotatePivot" " -type \"double3\" -89.08096350878756198 -79.73919924091609346 142.77925677758517509"
+		
+		2 "|MidGround:Track|MidGround:LowerRail_01" "scalePivot" " -type \"double3\" -89.08096350878756198 -79.73919924091609346 142.77925677758517509"
+		
+		2 "|MidGround:Track|MidGround:LowerRail_02" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:Track|MidGround:LowerRail_02" "rotatePivot" " -type \"double3\" -114.55926345847061043 -79.7391992409161503 130.9981260570676227"
+		
+		2 "|MidGround:Track|MidGround:LowerRail_02" "scalePivot" " -type \"double3\" -114.55926345847061043 -79.7391992409161503 130.9981260570676227"
+		
+		2 "|MidGround:Track|MidGround:RailPost" "rotatePivot" " -type \"double3\" -87.63168732553083373 -101.21924721416972659 203.8037761812652775"
+		
+		2 "|MidGround:Track|MidGround:RailPost" "scalePivot" " -type \"double3\" -87.63168732553083373 -101.21924721416972659 203.8037761812652775"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:RailPost_02" "rotatePivot" 
+		" -type \"double3\" -103.59777966543049388 -102.10512825550941329 186.5333513116621873"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:RailPost_02" "scalePivot" 
+		" -type \"double3\" -103.59777966543049388 -102.10512825550941329 186.5333513116621873"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:RailPost_03" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:RailPost_03" "rotatePivot" 
+		" -type \"double3\" -41.16575900100404795 -109.11224417037266221 127.376773231079639"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:RailPost_03" "scalePivot" 
+		" -type \"double3\" -41.16575900100404795 -109.11224417037266221 127.376773231079639"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:RailPost_04" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:RailPost_04" "rotatePivot" 
+		" -type \"double3\" -60.55891284891977477 -109.11224417037266221 87.10919440995616014"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:RailPost_04" "scalePivot" 
+		" -type \"double3\" -60.55891284891977477 -109.11224417037266221 87.10919440995616014"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:Cog" "rotatePivot" " -type \"double3\" -86.48603081757208599 -81.32404242962329022 205.06865711631473914"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:Cog" "scalePivot" " -type \"double3\" -86.48603081757208599 -81.32404242962329022 205.06865711631473914"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:Cog_02" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:Cog_02" "rotatePivot" " -type \"double3\" -39.72157468661955448 -90.30021783342738217 128.03423748415062278"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:Cog_02" "scalePivot" " -type \"double3\" -39.72157468661955448 -90.30021783342738217 128.03423748415062278"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:CogRing" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:CogRing" "rotatePivot" " -type \"double3\" -57.95025580945450372 -87.34537164138872356 93.47035559834932883"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:CogRing" "scalePivot" " -type \"double3\" -57.95025580945450372 -87.34537164138872356 93.47035559834932883"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:FirstSupport" "rotatePivot" 
+		" -type \"double3\" -107.40909254875623446 -87.41585385700474831 218.51720908472353244"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:FirstSupport" "scalePivot" 
+		" -type \"double3\" -107.40909254875623446 -87.41585385700474831 218.51720908472353244"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:BackSupport" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:BackSupport" "rotatePivot" 
+		" -type \"double3\" -35.05821447469863728 -98.92075862082944582 95.66927579330800313"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:BackSupport" "scalePivot" 
+		" -type \"double3\" -35.05821447469863728 -98.92075862082944582 95.66927579330800313"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:Far_Support" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:Far_Support" "rotatePivot" 
+		" -type \"double3\" -52.4243112208596358 -97.57260277984075003 72.49532420892720097"
+		
+		2 "|MidGround:Track|MidGround:RailPost|MidGround:Far_Support" "scalePivot" 
+		" -type \"double3\" -52.4243112208596358 -97.57260277984075003 72.49532420892720097"
+		
+		2 "|MidGround:Track|MidGround:FrntRailWire" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:Track|MidGround:FrntRailWire" "rotatePivot" " -type \"double3\" -0.0016484138821013516 0 0"
+		
+		2 "|MidGround:Track|MidGround:FrntRailWire" "scalePivot" " -type \"double3\" -0.0016484138821013516 0 0"
+		
+		2 "|MidGround:Track|MidGround:RearRailWire" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:Track|MidGround:RearRailWire" "rotatePivot" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:Track|MidGround:RearRailWire" "scalePivot" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:MainBuilding" "translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding" "rotatePivot" " -type \"double3\" 15.12921391925974746 40.55250416041298678 -63.26635692312475356"
+		
+		2 "|MidGround:MainBuilding" "scalePivot" " -type \"double3\" 15.12921391925973325 40.55250416041294415 -63.26635692312476067"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes" "rotatePivot" " -type \"double3\" 33.94069015950495327 19.25906065575087567 -80.75197701635549663"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes" "scalePivot" " -type \"double3\" 33.94069015950496038 19.25906065575087567 -80.75197701635549663"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:BldgByGrid" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:BldgByGrid" 
+		"rotatePivot" " -type \"double3\" 50.06697631177468111 30.11074885434832282 -91.02554005096348533"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:BldgByGrid" 
+		"scalePivot" " -type \"double3\" 50.06697631177468111 30.11074885434832282 -91.02554005096348533"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:RoundedSupportBeam" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:RoundedSupportBeam" 
+		"rotatePivot" " -type \"double3\" 39.21313206965980669 25.38117823410062357 -66.48394755685779955"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:RoundedSupportBeam" 
+		"scalePivot" " -type \"double3\" 39.21313206965981379 25.38117823410062357 -66.48394755685779955"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:SmBldgByGuards" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:SmBldgByGuards" 
+		"rotatePivot" " -type \"double3\" 39.12908000505137096 7.33920124654799189 -57.13034068797530551"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:SmBldgByGuards" 
+		"scalePivot" " -type \"double3\" 39.12908000505136386 7.33920124654799189 -57.13034068797530551"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:MainBldgBackSmokeStack" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:MainBldgBackSmokeStack" 
+		"rotatePivot" " -type \"double3\" 40.45240826768966258 71.97922126499821616 -71.12644201849391834"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgGridPipes|MidGround:MainBldgBackSmokeStack" 
+		"scalePivot" " -type \"double3\" 40.45240826768966258 71.97922126499821616 -71.12644201849391834"
+		
+		2 "|MidGround:MainBuilding|MidGround:Exhausts" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:MainBuilding|MidGround:Exhausts" "rotatePivot" " -type \"double3\" 19.56763442762270699 90.64422716517647416 -67.90496995566537919"
+		
+		2 "|MidGround:MainBuilding|MidGround:Exhausts" "scalePivot" " -type \"double3\" 19.56763442762270699 90.64422716517647416 -67.90496995566537919"
+		
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:FrontExhaust_01" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:FrontExhaust_01" 
+		"rotatePivot" " -type \"double3\" 1.98032071637753226 95.46329645720958013 -54.0964668494344636"
+		
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:FrontExhaust_01" 
+		"scalePivot" " -type \"double3\" 1.98032071637753226 95.46329645720958013 -54.0964668494344636"
+		
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:TallExhaust_02" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:TallExhaust_02" "rotatePivot" 
+		" -type \"double3\" 12.1053135909103986 99.43820721462988388 -63.52578696238633427"
+		
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:TallExhaust_02" "scalePivot" 
+		" -type \"double3\" 12.1053135909103986 99.43820721462988388 -63.52578696238633427"
+		
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:SquatExhaust_03" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:SquatExhaust_03" 
+		"rotatePivot" " -type \"double3\" 19.60661811519968367 95.31090063850287208 -67.74328261248074057"
+		
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:SquatExhaust_03" 
+		"scalePivot" " -type \"double3\" 19.60661811519968367 95.31090063850287208 -67.74328261248074057"
+		
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:RoundExhaust_04" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:RoundExhaust_04" 
+		"rotatePivot" " -type \"double3\" 27.85752785422408095 98.22902920494567525 -73.66432677189307299"
+		
+		2 "|MidGround:MainBuilding|MidGround:Exhausts|MidGround:RoundExhaust_04" 
+		"scalePivot" " -type \"double3\" 27.85752785422408095 98.22902920494567525 -73.66432677189307299"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail" "rotatePivot" " -type \"double3\" -20.05333924617518448 72.19754692804578156 -35.80487057252597083"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail" "scalePivot" " -type \"double3\" -20.05333924617518448 72.19754692804578156 -35.80487057252597083"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail|MidGround:MainBldgRailPoles" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail|MidGround:MainBldgRailPoles" 
+		"rotatePivot" " -type \"double3\" -20.27002329616946597 66.05262430053188893 -37.30137844127398239"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail|MidGround:MainBldgRailPoles" 
+		"scalePivot" " -type \"double3\" -20.27002329616946597 66.05262430053187472 -37.30137844127398239"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail|MidGround:MainBldgRailBridg" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail|MidGround:MainBldgRailBridg" 
+		"rotatePivot" " -type \"double3\" -20.46970346196215473 65.16998924169699592 -36.2188243503374423"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail|MidGround:MainBldgRailBridg" 
+		"scalePivot" " -type \"double3\" -20.46970346196215473 65.16998924169699592 -36.21882435033742809"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail|MidGround:MainBldgRailSupports" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail|MidGround:MainBldgRailSupports" 
+		"rotatePivot" " -type \"double3\" -20.36076278758867986 63.06613148810432534 -36.34919032227966795"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgRail|MidGround:MainBldgRailSupports" 
+		"scalePivot" " -type \"double3\" -20.36076278758867986 63.06613148810431113 -36.34919032227966795"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA" "rotatePivot" " -type \"double3\" -8.77167529610227348 46.28147893072685548 -33.19018328125106621"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA" "scalePivot" " -type \"double3\" -8.77167529610227348 46.28147893072684838 -33.19018328125106621"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:MainBldgSupportB" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:MainBldgSupportB" 
+		"rotatePivot" " -type \"double3\" -19.07866458249008446 45.31687533518393707 -54.29223877355531158"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:MainBldgSupportB" 
+		"scalePivot" " -type \"double3\" -19.07866458249008446 45.31687533518393707 -54.29223877355531158"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support8" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support8" 
+		"rotatePivot" " -type \"double3\" -18.92621246586607953 51.01260555115831608 -43.0599116507858497"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support8" 
+		"scalePivot" " -type \"double3\" -18.92621246586607953 51.01260555115831608 -43.0599116507858497"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support7" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support7" 
+		"rotatePivot" " -type \"double3\" -15.17140805342318544 51.12261039961731512 -37.29181022681322588"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support7" 
+		"scalePivot" " -type \"double3\" -15.17140805342318544 51.12261039961731512 -37.29181022681322588"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support5" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support5" 
+		"rotatePivot" " -type \"double3\" -3.34487126904953946 50.865721611389624 -31.18435951158188502"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support5" 
+		"scalePivot" " -type \"double3\" -3.34487126904953946 50.865721611389624 -31.18435951158188502"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support4" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support4" 
+		"rotatePivot" " -type \"double3\" 3.52031984608619108 51.04172574848260524 -33.43937696303068918"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support4" 
+		"scalePivot" " -type \"double3\" 3.52031984608619108 51.04172574848260524 -33.43937696303068918"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support3" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support3" 
+		"rotatePivot" " -type \"double3\" 10.64697950935078197 51.12731552200178697 -37.0440884322414945"
+		
+		2 "|MidGround:MainBuilding|MidGround:MainBldgSupportA|MidGround:Support3" 
+		"scalePivot" " -type \"double3\" 10.64697950935078197 51.12731552200178697 -37.0440884322414945"
+		
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding" "rotatePivot" " -type \"double3\" -18.99971710678946835 10.20310463008862989 -40.10555353174773074"
+		
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding" "scalePivot" " -type \"double3\" -18.99971710678946835 10.20310463008862989 -40.10555353174773074"
+		
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail" "rotatePivot" 
+		" -type \"double3\" -28.30717304910309551 26.47058786700432265 -25.1592397226539326"
+		
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail" "scalePivot" 
+		" -type \"double3\" -28.30717304910310261 26.47058786700432265 -25.15923972265392905"
+		
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail|MidGround:LwrRailPoles" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail|MidGround:LwrRailPoles" 
+		"rotatePivot" " -type \"double3\" -28.83492806650239615 20.88324515351410682 -25.92377194769151316"
+		
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail|MidGround:LwrRailPoles" 
+		"scalePivot" " -type \"double3\" -28.83492806650240325 20.88324515351411037 -25.92377194769151316"
+		
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail|MidGround:LwrRailSupports" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail|MidGround:LwrRailSupports" 
+		"rotatePivot" " -type \"double3\" -27.2282287143263666 19.37365004907208288 -27.01711541944771255"
+		
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail|MidGround:LwrRailSupports" 
+		"scalePivot" " -type \"double3\" -27.22822871432635594 19.37365004907208643 -27.01711541944769834"
+		
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail|MidGround:LwrRailBrdge" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail|MidGround:LwrRailBrdge" 
+		"rotatePivot" " -type \"double3\" -28.91156488445266248 20.06594762421450895 -25.50297357271232102"
+		
+		2 "|MidGround:MainBuilding|MidGround:LwrBuilding|MidGround:LwrRail|MidGround:LwrRailBrdge" 
+		"scalePivot" " -type \"double3\" -28.91156488445266248 20.06594762421452671 -25.50297357271231746"
+		
+		2 "|MidGround:RghtObservatory" "translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:RghtObservatory" "rotatePivot" " -type \"double3\" 126.07600862639768025 27.82427280753721632 -14.42599270215252183"
+		
+		2 "|MidGround:RghtObservatory" "scalePivot" " -type \"double3\" 126.07600862639768025 27.82427280753721632 -14.42599270215252183"
+		
+		2 "|MidGround:RghtObservatory|MidGround:Disk" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:RghtObservatory|MidGround:Disk" "rotatePivot" " -type \"double3\" 108.27585911278625019 34.80737371793905766 -45.24776137405407184"
+		
+		2 "|MidGround:RghtObservatory|MidGround:Disk" "scalePivot" " -type \"double3\" 108.27585911278623598 34.80737371793906476 -45.24776137405410026"
+		
+		2 "|MidGround:RghtObservatory|MidGround:Disk|MidGround:DiskRing" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|MidGround:RghtObservatory|MidGround:Disk|MidGround:DiskRing" "rotatePivot" 
+		" -type \"double3\" 108.48237028238759194 31.43059015443405357 -45.38980092711633318"
+		
+		2 "|MidGround:RghtObservatory|MidGround:Disk|MidGround:DiskRing" "scalePivot" 
+		" -type \"double3\" 108.48237028238759194 31.43059015443405357 -45.38980092711633318"
+		
+		2 "|MidGround:RghtObservatory|MidGround:Disk|MidGround:DiskMainPipes" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|MidGround:RghtObservatory|MidGround:Disk|MidGround:DiskMainPipes" "rotatePivot" 
+		" -type \"double3\" 106.92933718023267886 30.10153397043617929 -46.45868030099260437"
+		
+		2 "|MidGround:RghtObservatory|MidGround:Disk|MidGround:DiskMainPipes" "scalePivot" 
+		" -type \"double3\" 106.92933718023269307 30.10153397043618639 -46.45868030099261858"
+		
+		2 "|MidGround:RghtObservatory|MidGround:Disk|MidGround:DiskSmallerPipes" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:RghtObservatory|MidGround:Disk|MidGround:DiskSmallerPipes" 
+		"rotatePivot" " -type \"double3\" 108.97095986888281516 29.18204681283275193 -45.4585741425704839"
+		
+		2 "|MidGround:RghtObservatory|MidGround:Disk|MidGround:DiskSmallerPipes" 
+		"scalePivot" " -type \"double3\" 108.97095986888281516 29.18204681283275548 -45.45857414257049101"
+		
+		2 "|MidGround:RghtObservatory|MidGround:CellTower" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:RghtObservatory|MidGround:CellTower" "rotatePivot" " -type \"double3\" 126.28493176647151586 59.0577123460103266 -25.55631471100932828"
+		
+		2 "|MidGround:RghtObservatory|MidGround:CellTower" "scalePivot" " -type \"double3\" 126.28493176647151586 59.0577123460103266 -25.55631471100932828"
+		
+		2 "|MidGround:LftObservatoryBldg" "translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:LftObservatoryBldg" "rotatePivot" " -type \"double3\" 15.4013885343982615 0 50.46886184089543548"
+		
+		2 "|MidGround:LftObservatoryBldg" "scalePivot" " -type \"double3\" 15.4013885343982615 0 50.46886184089543548"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:ObsvSupport" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:ObsvSupport" "rotatePivot" " -type \"double3\" -141.77921795122745152 45.58515520036877433 53.41744308041288036"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:ObsvSupport" "scalePivot" " -type \"double3\" -141.77921795122745152 45.58515520036877433 53.41744308041288036"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:ObsvTopCyl" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:ObsvTopCyl" "rotatePivot" " -type \"double3\" -143.45436507793044711 69.69251837805461491 42.57503534571085169"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:ObsvTopCyl" "scalePivot" " -type \"double3\" -143.45436507793044711 69.69251837805461491 42.57503534571085879"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:ObsvSteamPipe" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:ObsvSteamPipe" "rotatePivot" " -type \"double3\" -154.20883978244660284 55.28524522112229533 38.19546548539987896"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:ObsvSteamPipe" "scalePivot" " -type \"double3\" -154.20883978244660284 55.28524522112229533 38.19546548539987896"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrBldgObsv" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrBldgObsv" "rotatePivot" " -type \"double3\" -139.43140603264191668 40.0893804398344642 60.55628808358071069"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrBldgObsv" "scalePivot" " -type \"double3\" -139.43140603264191668 40.0893804398344642 60.55628808358071069"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg" "rotatePivot" 
+		" -type \"double3\" -130.48603767000966513 34.41529031595474208 78.62581843008914007"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg" "scalePivot" " -type \"double3\" -130.48603767000966513 34.41529031595474208 78.62581843008914007"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:SkinnyBldgObsv" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:SkinnyBldgObsv" 
+		"rotatePivot" " -type \"double3\" -129.42850801450089193 46.26309532626894594 68.44049485870385752"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:SkinnyBldgObsv" 
+		"scalePivot" " -type \"double3\" -129.42850801450089193 46.26309532626894594 68.44049485870385752"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:SkinnyBldgObsv|MidGround:RndPipe" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:SkinnyBldgObsv|MidGround:RndPipe" 
+		"rotatePivot" " -type \"double3\" -127.940080538829136 51.55873332932612385 63.60848967053170355"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:SkinnyBldgObsv|MidGround:RndPipe" 
+		"scalePivot" " -type \"double3\" -127.940080538829136 51.55873332932613096 63.60848967053170355"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:SteamPipeFrntObsv" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:SteamPipeFrntObsv" 
+		"rotatePivot" " -type \"double3\" -120.91960166176181701 37.70423959156365612 78.62581843008915428"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:SteamPipeFrntObsv" 
+		"scalePivot" " -type \"double3\" -120.91960166176181701 37.70423959156365612 78.62581843008915428"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:ClawObjObservatory" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:ClawObjObservatory" 
+		"rotatePivot" " -type \"double3\" -115.07474477839377869 28.04835114161048892 40.7873636227983738"
+		
+		2 "|MidGround:LftObservatoryBldg|MidGround:LwrLftObsvBldg|MidGround:ClawObjObservatory" 
+		"scalePivot" " -type \"double3\" -115.07474477839377869 28.04835114161048892 40.7873636227983738"
+		
+		2 "|MidGround:MGBase" "translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:MGBase" "rotatePivot" " -type \"double3\" 39.13592387094981007 -101.14140450460131149 -37.5771589220153146"
+		
+		2 "|MidGround:MGBase" "scalePivot" " -type \"double3\" 39.13592387094981007 -101.14140450460131149 -37.5771589220153146"
+		
+		2 "|MidGround:MGBase|MidGround:RghtRockCollumn" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:MGBase|MidGround:RghtRockCollumn" "rotatePivot" " -type \"double3\" 93.90596045302520167 -26.08271492370112909 -35.436942128487388"
+		
+		2 "|MidGround:MGBase|MidGround:RghtRockCollumn" "scalePivot" " -type \"double3\" 93.90596045302520167 -26.08271492370112909 -35.436942128487388"
+		
+		2 "|MidGround:MGBase|MidGround:RghtRockCollumn|MidGround:Slide" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|MidGround:MGBase|MidGround:RghtRockCollumn|MidGround:Slide" "rotatePivot" 
+		" -type \"double3\" 39.22341872421831255 -26.16056308178902867 -1.59310432788755918"
+		
+		2 "|MidGround:MGBase|MidGround:RghtRockCollumn|MidGround:Slide" "scalePivot" 
+		" -type \"double3\" 39.22341872421831255 -26.16056308178902867 -1.59310432788755918"
+		
+		2 "|MidGround:MGBase|MidGround:RockTier_01" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:MGBase|MidGround:RockTier_01" "rotatePivot" " -type \"double3\" -1.08962872282269552 -47.32474348707100376 -57.86483328901233136"
+		
+		2 "|MidGround:MGBase|MidGround:RockTier_01" "scalePivot" " -type \"double3\" -1.08962872282269552 -47.32474348707099665 -57.86483328901231715"
+		
+		2 "|MidGround:MGBase|MidGround:RockTier_01|MidGround:RockTier_02" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|MidGround:MGBase|MidGround:RockTier_01|MidGround:RockTier_02" "rotatePivot" 
+		" -type \"double3\" 5.00655610764515924 -11.46423799231711449 -54.38641131684187258"
+		
+		2 "|MidGround:MGBase|MidGround:RockTier_01|MidGround:RockTier_02" "scalePivot" 
+		" -type \"double3\" 5.00655610764515924 -11.46423799231711449 -54.38641131684187258"
+		
+		2 "|MidGround:MGBase|MidGround:RockTier_01|MidGround:MtnWaterSpout" "translate" 
+		" -type \"double3\" 0 0 0"
+		2 "|MidGround:MGBase|MidGround:RockTier_01|MidGround:MtnWaterSpout" "rotatePivot" 
+		" -type \"double3\" 39.16849673505363683 -10.03247466519310294 -38.71416742371440023"
+		
+		2 "|MidGround:MGBase|MidGround:RockTier_01|MidGround:MtnWaterSpout" "scalePivot" 
+		" -type \"double3\" 39.16849673505363683 -10.03247466519310294 -38.71416742371440023"
+		
+		2 "|MidGround:MGBase|MidGround:RockPillar" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:MGBase|MidGround:RockPillar" "rotatePivot" " -type \"double3\" 22.98736900254855797 -38.32476211597952442 -14.16099084245526463"
+		
+		2 "|MidGround:MGBase|MidGround:RockPillar" "scalePivot" " -type \"double3\" 22.98736900254855797 -38.32476211597952442 -14.16099084245526463"
+		
+		2 "|MidGround:MGBase|MidGround:SquatBoulder" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:MGBase|MidGround:SquatBoulder" "rotatePivot" " -type \"double3\" 13.65939688669782015 -51.23107812136034767 -12.41417823962073541"
+		
+		2 "|MidGround:MGBase|MidGround:SquatBoulder" "scalePivot" " -type \"double3\" 13.65939688669782015 -51.23107812136034767 -12.41417823962073541"
+		
+		2 "|MidGround:MGBase|MidGround:TallBoulder" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|MidGround:MGBase|MidGround:TallBoulder" "rotatePivot" " -type \"double3\" -14.14465081022649429 -44.50991127464284602 -13.19206434238693859"
+		
+		2 "|MidGround:MGBase|MidGround:TallBoulder" "scalePivot" " -type \"double3\" -14.14465081022649429 -44.50991127464284602 -13.19206434238693859"
+		
+		2 "|MidGround:LMtnMid" "translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:LMtnMid" "rotatePivot" " -type \"double3\" -153.24753450831551049 -21.10086291440872941 68.97286553483759519"
+		
+		2 "|MidGround:LMtnMid" "scalePivot" " -type \"double3\" -153.24753450831551049 -21.10086291440872941 68.97286553483759519"
+		
+		2 "|MidGround:BackLMnt" "translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:BackLMnt" "rotatePivot" " -type \"double3\" -120.80184552015886368 -40.14711136959182625 -235.73204044763963338"
+		
+		2 "|MidGround:BackLMnt" "scalePivot" " -type \"double3\" -120.80184552015880683 -40.14711136959182625 -235.73204044763963338"
+		
+		2 "|MidGround:RMtnBack" "translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:RMtnBack" "rotatePivot" " -type \"double3\" 231.53208064534214827 0 -368.79421908547874409"
+		
+		2 "|MidGround:RMtnBack" "scalePivot" " -type \"double3\" 231.53208064534220512 0 -368.79421908547885778"
+		
+		2 "|MidGround:RMtnBack|MidGround:RMtnBackShape" "uvPivot" " -type \"double2\" 0.60564815998077393 0.62216255068778992"
+		
+		2 "|MidGround:FarMtnRidge" "translate" " -type \"double3\" 0 0 0"
+		2 "|MidGround:FarMtnRidge" "rotatePivot" " -type \"double3\" -64.69569781575400214 -39.56825561800604873 -624.54879664123313887"
+		
+		2 "|MidGround:FarMtnRidge" "scalePivot" " -type \"double3\" -64.69569781575400214 -39.56825561800604873 -624.54879664123313887";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -61155,17 +61666,18 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 42 ".st";
+	setAttr -s 59 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 12 ".s";
+	setAttr -s 14 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 6 ".u";
+	setAttr -s 8 ".u";
 select -ne :defaultRenderingList1;
+	setAttr -s 2 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 6 ".tx";
+	setAttr -s 8 ".tx";
 select -ne :lambert1;
 	setAttr ".c" -type "float3" 0.434248 0.52700001 0.4387233 ;
 select -ne :initialShadingGroup;
