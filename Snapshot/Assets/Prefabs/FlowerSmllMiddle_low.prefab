@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5699603823701872965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.8564384, y: -0.69727254, z: 5.556645}
-  m_LocalScale: {x: 8.4139, y: 8.4139, z: 8.4139}
+  m_LocalScale: {x: 4.2797303, y: 4.2797303, z: 4.2797303}
   m_Children:
   - {fileID: 5699603823701708141}
   m_Father: {fileID: 0}
@@ -145,16 +145,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6321859519841781126, guid: cad1543012f146b4eb206f4397533f34,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b2b62b137776e144da84dc43cedc425a, type: 2}
-    - target: {fileID: 6321859519841781124, guid: cad1543012f146b4eb206f4397533f34,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b2b62b137776e144da84dc43cedc425a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cad1543012f146b4eb206f4397533f34, type: 3}
 --- !u!4 &5699603823701708141 stripped
