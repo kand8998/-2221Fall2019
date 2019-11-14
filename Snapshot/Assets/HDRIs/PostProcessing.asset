@@ -16,7 +16,6 @@ MonoBehaviour:
   - {fileID: 114116054841293956}
   - {fileID: 114172952199705186}
   - {fileID: 114297751343201094}
-  - {fileID: 114234538212225182}
   - {fileID: 114279331617038160}
   - {fileID: 114784910519983038}
   - {fileID: 114888023549396430}
@@ -1380,43 +1379,6 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
---- !u!114 &114234538212225182
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a34fa72bd4185749832024e9c8010bf, type: 3}
-  m_Name: ScreenSpaceReflections
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  preset:
-    overrideState: 1
-    value: 3
-  maximumIterationCount:
-    overrideState: 1
-    value: 16
-  resolution:
-    overrideState: 1
-    value: 0
-  thickness:
-    overrideState: 1
-    value: 8
-  maximumMarchDistance:
-    overrideState: 1
-    value: 254.64
-  distanceFade:
-    overrideState: 1
-    value: 0.159
-  vignette:
-    overrideState: 1
-    value: 0.32
 --- !u!114 &114279331617038160
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1523,19 +1485,19 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 0
+    value: 1
   focusDistance:
     overrideState: 1
-    value: 16.8
+    value: 29.9
   aperture:
     overrideState: 1
     value: 2
   focalLength:
     overrideState: 1
-    value: 103.9
+    value: 77
   kernelSize:
     overrideState: 1
-    value: 1
+    value: 0
 --- !u!114 &114888023549396430
 MonoBehaviour:
   m_ObjectHideFlags: 3
