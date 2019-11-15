@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: ForeGround.ma
-//Last modified: Sat, Nov 09, 2019 04:06:46 PM
+//Last modified: Fri, Nov 15, 2019 12:20:03 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "1243E703-495F-D636-8716-A5BFC346021E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -39.194208620459364 561.6467651136993 1139.1866791759103 ;
-	setAttr ".r" -type "double3" -752.13835306674764 5760.1999999990358 -2.5469440703704228e-16 ;
+	setAttr ".t" -type "double3" 214.47342155824103 4249.3930137005455 1266.2119154487305 ;
+	setAttr ".r" -type "double3" -798.33835306036451 5760.1999999986401 -6.2120587082203955e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "73FD4AA4-4945-D67E-DB80-43A372F43184";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1044.5909301732574;
+	setAttr ".coi" 4395.6819032701369;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -38947,6 +38947,7 @@ createNode mesh -n "Ground_lowShape" -p "Ground_low";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:3854]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49934302922338247 0.50317109376192093 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 5621 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.86456251 0.68170601 0.82297957
@@ -40386,6 +40387,170 @@ createNode mesh -n "Ground_lowShape" -p "Ground_low";
 	setAttr ".clst[0].clsn" -type "string" "SculptMaskColorTemp";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 955 ".pt";
+	setAttr ".pt[183:348]" -type "float3"  0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 
+		0 0 6.0705123 0 0 6.0705123 0 0 6.0705123 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266;
+	setAttr ".pt[349:514]" 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266;
+	setAttr ".pt[515:680]" 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266;
+	setAttr ".pt[681:846]" 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266;
+	setAttr ".pt[847:1012]" 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266;
+	setAttr ".pt[1013:1137]" 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 0 0 19.547266 
+		0 0 19.547266;
 	setAttr -s 4123 ".vt";
 	setAttr ".vt[0:165]"  235.62547302 -81.57322693 506.68615723 257.35498047 -82.19068146 537.81646729
 		 299.4347229 -82.092124939 532.043457031 190.91088867 -78.64473724 347.64730835 200.79548645 -77.92112732 305.94836426
@@ -51011,7 +51176,7 @@ createNode transform -n "Tier_low" -p "LowForeground";
 createNode mesh -n "Tier_lowShape" -p "Tier_low";
 	rename -uid "EB176AA4-4B35-76C3-19B6-4D9D90AADCEE";
 	setAttr -k off ".v";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 68 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:67]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -56087,19 +56252,19 @@ createNode mesh -n "ChunkyFlower_lowShape" -p "ChunkyFlower_low";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "43B794C3-4BE3-62FB-DBEF-1D8E9BBEFE87";
+	rename -uid "1C3F6C54-493E-CBF3-CD2A-809F4AD76AEB";
 	setAttr -s 43 ".lnk";
 	setAttr -s 43 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8B35F987-4D84-6BF2-7778-0E96B4826B55";
+	rename -uid "3B08C97C-4908-6431-E480-A49FD006E41B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "1C8E4476-4336-D86D-8D5E-368426FDD300";
+	rename -uid "52F5D3AE-44EA-C51B-4DFF-398FCEF1EC1F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "77A08724-4C7C-4952-2DBB-F9B666F80DBB";
+	rename -uid "F9AA44F7-4BC4-8D62-9F8C-899C8A186DEF";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "052BA599-4000-49E1-C25C-528E309A5C96";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "1DCD85FD-49ED-04E5-AB42-6A99684F3994";
+	rename -uid "EFC4863B-4B41-762E-1009-10863E96A27A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "1B49CEA8-49F4-5EAB-1C8C-1DA6BD698AE3";
 	setAttr ".g" yes;
@@ -56193,7 +56358,7 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
 		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
 		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
-		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 714\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
@@ -56861,8 +57026,6 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId138.id" "SolarPanel01_highGeo.iog.og[0].gid";
 connectAttr "violetSG.mwc" "SolarPanel01_highGeo.iog.og[0].gco";
 connectAttr "groupId140.id" "SolarPanel01_highGeo.iog.og[1].gid";
