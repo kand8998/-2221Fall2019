@@ -15,7 +15,6 @@ MonoBehaviour:
   settings:
   - {fileID: 114116054841293956}
   - {fileID: 114172952199705186}
-  - {fileID: 114279331617038160}
   - {fileID: 114784910519983038}
   - {fileID: 114888023549396430}
 --- !u!114 &114116054841293956
@@ -132,13 +131,13 @@ MonoBehaviour:
     value: 0
   saturation:
     overrideState: 1
-    value: 10.57
+    value: 5.91
   brightness:
     overrideState: 1
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.5
+    value: 0
   contrast:
     overrideState: 1
     value: 0
@@ -171,7 +170,7 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.9660289, y: 1, z: 0.99359626, w: -0.030832488}
+    value: {x: 0.9660289, y: 1, z: 0.99359626, w: -0.071942426}
   gamma:
     overrideState: 1
     value: {x: 1, y: 1, z: 1, w: -0.07923927}
@@ -1378,50 +1377,6 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
---- !u!114 &114279331617038160
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40b924e2dad56384a8df2a1e111bb675, type: 3}
-  m_Name: Vignette
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  mode:
-    overrideState: 1
-    value: 0
-  color:
-    overrideState: 1
-    value: {r: 0.1792453, g: 0.062934704, b: 0.027901392, a: 1}
-  center:
-    overrideState: 1
-    value: {x: 0.5, y: 0.5}
-  intensity:
-    overrideState: 1
-    value: 0.4
-  smoothness:
-    overrideState: 1
-    value: 0.37
-  roundness:
-    overrideState: 1
-    value: 1
-  rounded:
-    overrideState: 1
-    value: 0
-  mask:
-    overrideState: 1
-    value: {fileID: 0}
-    defaultState: 1
-  opacity:
-    overrideState: 1
-    value: 1
 --- !u!114 &114784910519983038
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1440,7 +1395,7 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 16.4
+    value: 18.84
   aperture:
     overrideState: 1
     value: 4.8
