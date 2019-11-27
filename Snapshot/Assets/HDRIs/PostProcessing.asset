@@ -16,7 +16,6 @@ MonoBehaviour:
   - {fileID: 114116054841293956}
   - {fileID: 114172952199705186}
   - {fileID: 114784910519983038}
-  - {fileID: 114888023549396430}
 --- !u!114 &114116054841293956
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -38,10 +37,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 2.12
   color:
     overrideState: 1
-    value: {r: 0, g: 0, b: 0, a: 1}
+    value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   ambientOnly:
     overrideState: 1
     value: 1
@@ -56,7 +55,7 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 1
+    value: 1.49
   directLightingStrength:
     overrideState: 1
     value: 0
@@ -119,7 +118,7 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 6.9
+    value: 0
   tint:
     overrideState: 1
     value: 0
@@ -131,16 +130,16 @@ MonoBehaviour:
     value: 0
   saturation:
     overrideState: 1
-    value: 5.91
+    value: 27.7
   brightness:
     overrideState: 1
     value: 0
   postExposure:
     overrideState: 1
-    value: 0
+    value: 0.01
   contrast:
     overrideState: 1
-    value: 0
+    value: 10.7
   mixerRedOutRedIn:
     overrideState: 1
     value: 92.85
@@ -173,10 +172,10 @@ MonoBehaviour:
     value: {x: 0.9660289, y: 1, z: 0.99359626, w: -0.071942426}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 1, z: 1, w: -0.07923927}
+    value: {x: 0.85959065, y: 0.9175854, z: 1, w: 0.17799544}
   gain:
     overrideState: 1
-    value: {x: 1, y: 1, z: 1, w: 0.11305243}
+    value: {x: 1, y: 1, z: 1, w: -0.14418225}
   masterCurve:
     overrideState: 1
     value:
@@ -1395,35 +1394,13 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 15.5
+    value: 18.3
   aperture:
     overrideState: 1
     value: 4.8
   focalLength:
     overrideState: 1
-    value: 97.2
+    value: 106.13
   kernelSize:
     overrideState: 1
     value: 3
---- !u!114 &114888023549396430
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
-  m_Name: MotionBlur
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  shutterAngle:
-    overrideState: 1
-    value: 190
-  sampleCount:
-    overrideState: 1
-    value: 11
