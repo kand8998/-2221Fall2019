@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 2.44
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: a9fbac922242598449f7e08bec2156b0, type: 2}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.62
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1323455517}
-  m_IndirectSpecularColor: {r: 1.2661477, g: 1.27086, b: 1.3535758, a: 0.62}
+  m_IndirectSpecularColor: {r: 0.5509148, g: 0.5526014, b: 0.58532554, a: 0.62}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -62036,7 +62036,7 @@ GameObject:
   - component: {fileID: 1323455516}
   - component: {fileID: 1323455517}
   m_Layer: 0
-  m_Name: Highlight
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113052,7 +113052,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ac39583378966b044a24988a4663cb83, type: 2}
+  - {fileID: 2100000, guid: f4b66fa384fc1304f88006e5139dab0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
