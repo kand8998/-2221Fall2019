@@ -12,7 +12,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Environment/Water/Water/Scripts/Water.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActiveEvent.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -20,13 +20,9 @@
         <option value="$PROJECT_DIR$/Assets/TriggerMonoEvents'.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerMonoEvents'.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TrigerEvent.cs" />
       </list>
     </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="980" />
-    <option name="width" value="945" />
-    <option name="height" value="1040" />
   </component>
   <component name="ProjectId" id="1QTn36eR1NCJ2KuG9Ll9fzt3SbX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -35,6 +31,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -81,6 +78,7 @@
       <workItem from="1568389742159" duration="14000" />
       <workItem from="1573604822773" duration="5000" />
       <workItem from="1573846471521" duration="599000" />
+      <workItem from="1575498104729" duration="996000" />
     </task>
     <servers />
   </component>
