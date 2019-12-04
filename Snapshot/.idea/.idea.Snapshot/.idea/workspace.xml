@@ -12,7 +12,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActiveEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActiveEvent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerMonoEvents'.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TrigerEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ActiveEvent.cs" />
       </list>
     </option>
   </component>
@@ -78,7 +79,7 @@
       <workItem from="1568389742159" duration="14000" />
       <workItem from="1573604822773" duration="5000" />
       <workItem from="1573846471521" duration="599000" />
-      <workItem from="1575498104729" duration="996000" />
+      <workItem from="1575498104729" duration="1824000" />
     </task>
     <servers />
   </component>
@@ -102,6 +103,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="445" y="161" key="SettingsEditor" />
+    <state x="445" y="161" key="SettingsEditor/1920.1080" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
